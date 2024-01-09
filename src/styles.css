@@ -1,0 +1,17 @@
+* {
+    box-sizing:border-box;
+}
+.container {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: fit-content;
+}
+.city-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flag-icon {
+    max-width: 30px;
+}
