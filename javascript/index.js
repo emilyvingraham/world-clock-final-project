@@ -51,11 +51,36 @@ function timeZoneInterval() {
 
 setInterval(timeZoneInterval, 1000);
 
-/////////////////////////////////////EVENT LISTENER FUNCTION
+
 function showCity(event) {
-    let cityTimeZone = event.target.value;
+    let city = event.target.value;
+
+    if (city === 'current') {
+        city = moment.tz.guess();
+    }
+
+    let cityTimeZone = moment().tz(city);
+
     let cityElement = document.querySelector('#cities');
-    cityElement.innerHTML = `${cityTimeZone}`;
+    cityElement.innerHTML = `<div class="city-container">
+                    <div class="city-flex">
+                        <div>
+                            <h2>
+                                ${city.replace('_', ' ').split('/')[1]}
+                                
+                            </h2>
+                        </div>
+                        <div>
+                            <h1 class="time">${cityTimeZone.format('hh:mm:ss')}
+                                <small>${cityTimeZone.format('A')}</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="date">${cityTimeZone.format(
+                        'dddd, MMMM Do, YYYY'
+                    )}</div>
+                </div>
+                <div><a href="/">Back to Homepage</a></div>`;
 }
 
 let selectCityElement = document.querySelector('#select-city');
