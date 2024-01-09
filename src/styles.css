@@ -1,17 +1,77 @@
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+    background-color: #22267b;
 }
 .container {
-    border: 1px solid black;
+    border: 3px solid #22267b;
+    border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
     max-width: fit-content;
+    background-color: #f8fcfb;
 }
 .city-flex {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: -20px;
+}
+.city-container {
+    border: 3px solid #22267b;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-height: 100px;
+    background-color: #9adea2;     
+    
+}
+.date {
+    position: relative;
+    bottom: 50px;
+}
+.time {
+    font-size: 40px;   
+}
+
+small {
+    font-size: 20px;
+    position: relative;
+    bottom: 8px;
+    right: 8px;
 }
 
 .flag-icon {
     max-width: 30px;
+    position: relative;
+    top: 8px;
+}
+
+select {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    background-color: #22267b;
+    color: white;
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+
+.title {
+    text-align: center;
+    line-height: 20px;
+    font-size: 50px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+a {
+    color: #22267b;
+    font-weight: bolder;
 }
